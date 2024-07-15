@@ -1,20 +1,18 @@
 import { StyleSheet } from 'react-native';
 import Animated, {
-  useSharedValue,
   useAnimatedStyle,
-  withTiming,
+  useSharedValue,
   withRepeat,
   withSequence,
+  withTiming,
 } from 'react-native-reanimated';
-
-import { Text } from 'native-base';
 
 export function HelloWave() {
   const rotationAnimation = useSharedValue(0);
 
   rotationAnimation.value = withRepeat(
     withSequence(withTiming(25, { duration: 150 }), withTiming(0, { duration: 150 })),
-    4 
+    4
   );
 
   const animatedStyle = useAnimatedStyle(() => ({

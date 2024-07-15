@@ -9,7 +9,9 @@ export default function TabTwoScreen() {
       justifyContent="center"
       p={5}
     >
-      <Text fontSize="xl" bold>Welcome to Tanstack!</Text>
+      <Text fontSize="xl" bold>
+        DarkMode Toggle
+      </Text>
       <ToggleDarkMode />
     </Box>
   );

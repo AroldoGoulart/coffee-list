@@ -1,8 +1,7 @@
-import { StyleSheet, Animated, Easing } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useColorMode } from 'native-base';
-import { Text } from 'native-base';
+import { Text, useColorMode } from 'native-base';
 import { useEffect, useRef } from 'react';
+import { Animated, Easing, StyleSheet } from 'react-native';
 
 export function Loading() {
   const { colorMode } = useColorMode();

@@ -1,5 +1,5 @@
 import { Link, Stack } from 'expo-router';
-import { Box, Text, Pressable } from 'native-base';
+import { Box, Pressable, Text } from 'native-base';
 
 export default function NotFoundScreen() {
   return (

@@ -1,39 +1,30 @@
-import { useColorMode } from 'native-base';
+import { Pressable, useColorMode } from 'native-base';
 import React from 'react';
-import {
-  Pressable,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-} from 'react-native';
+import { StyleSheet } from 'react-native';
+
 import Animated, {
-  useSharedValue,
   useAnimatedStyle,
   useDerivedValue,
+  useSharedValue,
   withDelay,
   withTiming,
 } from 'react-native-reanimated';
-
-export type BottomSheetProps = {
-  isOpen: Animated.SharedValue<boolean>;
-  toggleSheet: () => void;
-  duration?: number;
-  children: React.ReactNode;
-  height?: number;
-};
+import { BottomSheetProps } from './types';
 
 function BottomSheet(props: BottomSheetProps) {
-  const { isOpen, toggleSheet, duration = 500, children,
+  const { 
+    isOpen, 
+    toggleSheet, 
+    duration = 500, 
+    children,
     height: heightProp = 250
   } = props;
+
   const { colorMode } = useColorMode();
   const colorScheme = colorMode === 'dark' ? 'dark' : 'light';
+
   const height = useSharedValue(0);
-  const progress = useDerivedValue(() =>
-    withTiming(isOpen.value ? 0 : 1, { duration })
-  );
+  const progress = useDerivedValue(() => withTiming(isOpen.value ? 0 : 1, { duration }));
 
   const sheetStyle = useAnimatedStyle(() => ({
     transform: [{ translateY: progress.value * 2 * height.value }],
@@ -53,7 +44,7 @@ function BottomSheet(props: BottomSheetProps) {
   return (
     <>
       <Animated.View style={[sheetStyles.backdrop, backdropStyle]}>
-        <TouchableOpacity style={styles.flex} onPress={toggleSheet} />
+        <Pressable flex={1} onPress={toggleSheet} />
       </Animated.View>
       <Animated.View
         onLayout={(e) => {
@@ -85,44 +76,3 @@ const sheetStyles = StyleSheet.create({
 });
 
 export default BottomSheet;
-
-const styles = StyleSheet.create({
-  flex: {
-    flex: 1,
-  },
-  container: {
-    flex: 1,
-    height: 250,
-  },
-  buttonContainer: {
-    marginTop: 16,
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100%',
-    justifyContent: 'space-around',
-  },
-  toggleButton: {
-    backgroundColor: '#b58df1',
-    padding: 12,
-    borderRadius: 48,
-  },
-  toggleButtonText: {
-    color: 'white',
-  },
-  safeArea: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-  },
-  bottomSheetButton: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    paddingBottom: 2,
-  },
-  bottomSheetButtonText: {
-    fontWeight: 600,
-    textDecorationLine: 'underline',
-  },
-});

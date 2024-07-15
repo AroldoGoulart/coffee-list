@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
 import { TanstackProvider } from "@/providers/lib/tanstack";
+import { PropsWithChildren } from "react";
 import ThemeProvider from "./lib/theme";
 
 function Providers({ children }: PropsWithChildren) {
