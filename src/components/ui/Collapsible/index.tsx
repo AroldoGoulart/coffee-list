@@ -1,13 +1,12 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { PropsWithChildren, useState } from 'react';
-import { Pressable, Text } from 'native-base';
-import { View } from '../View';
+import { Box, Pressable, Text } from 'native-base';
 
 export function Collapsible({ children, title }: PropsWithChildren & { title: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <View>
+    <Box>
       <Pressable
         //style={styles.heading}
         flexDir={'row'}
@@ -20,7 +19,7 @@ export function Collapsible({ children, title }: PropsWithChildren & { title: st
         />
         <Text>{title}</Text>
       </Pressable>
-      {isOpen && <View marginTop={'1'} marginLeft={'1.5'} >{children}</View>}
-    </View>
+      {isOpen && <Box marginTop={'1'} marginLeft={'1.5'} >{children}</Box>}
+    </Box>
   );
 }

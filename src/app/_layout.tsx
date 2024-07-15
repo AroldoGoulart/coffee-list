@@ -30,7 +30,8 @@ export default function RootLayout() {
 
   return (
     <Providers>
-      <Box 
+      <Box
+        safeArea
         flex={1}
         paddingTop={'16'}
       >
