@@ -19,7 +19,7 @@ const CustomTheme = extendTheme({
     },
     Input: {
       defaultProps: {
-        placeholderTextColor: 'muted.400',
+        placeholderTextColor: 'muted.500',
         size: 'md',
         variant: 'filled',
       },
