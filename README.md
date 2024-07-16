@@ -1,9 +1,10 @@
 # Coffee-list
 
 Coffee-list is a simple app to display a list of hot coffee drinks using data from the [Sample APIs](https://api.sampleapis.com/coffee/hot).
-
-![Dark Mode](.github/images/dark.jpeg)
-![Light Mode](.github/images/light.jpeg)
+<p align="center">
+  <img src=".github/images/dark.jpeg" alt="Dark Mode" width="45%">
+  <img src=".github/images/light.jpeg" alt="Light Mode" width="45%">
+</p>
 
 ## Features
 
