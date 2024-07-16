@@ -1,50 +1,59 @@
-# Welcome to your Expo app 👋
+# Coffee-list
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Coffee-list is a simple app to display a list of hot coffee drinks using data from the [Sample APIs](https://api.sampleapis.com/coffee/hot).
 
-## Get started
+![Dark Mode](.github/images/dark.jpeg)
+![Light Mode](.github/images/light.jpeg)
 
-1. Install dependencies
+## Features
+
+- Fetch and display a list of hot coffee drinks.
+- Supports both light and dark themes.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You need to have Node.js and Expo CLI installed. You can download Node.js from [here](https://nodejs.org/) and install Expo CLI globally by running:
+
+```bash
+npm install -g expo-cli
+```
+
+### Installation
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/your-username/coffee-list.git
+   cd coffee-list
+   ```
+
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+### Running the App
+
+1. Start the app
 
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+2. Follow the instructions in the terminal to run the app on an emulator or a physical device.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Built With
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- [React Native](https://reactnative.dev/) - Framework for building native apps.
+- [Expo](https://expo.dev/) - Toolset for developing and building React Native apps.
+- [NativeBase](https://nativebase.io/) - For UI
 
-## Get a fresh project
+## Acknowledgments
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Sample APIs](https://api.sampleapis.com/) for providing the coffee API.
+- Inspiration from coffee lovers around the world.
