@@ -13,7 +13,7 @@ function ProductList(props: ProductListType) {
         <Text fontSize="xl" bold>No coffee found!</Text>
         <Text fontSize="md">Oh no.. I can't find the coffee!</Text>
         <Button onPress={cleanSearch} mt={4}>
-         Clean search
+          Clean search
         </Button>
       </Box>
     )

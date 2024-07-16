@@ -17,6 +17,13 @@ const CustomTheme = extendTheme({
         padding: 16,
       },
     },
+    Input: {
+      defaultProps: {
+        placeholderTextColor: 'muted.400',
+        size: 'md',
+        variant: 'filled',
+      },
+    }
   },
   fontConfig: {
     SpaceMono: {
