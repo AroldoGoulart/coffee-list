@@ -1,5 +1,6 @@
+import Box from "@/components/Box";
 import ToggleDarkMode from "@/components/ToggleDarkMode";
-import { Box, Text } from "native-base";
+import { Text } from "native-base";
 
 export default function TabTwoScreen() {
   return (

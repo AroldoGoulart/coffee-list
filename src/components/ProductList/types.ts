@@ -1,6 +1,7 @@
-import { CoffeeItem } from "@/services/coffee/types"
+import { CoffeeItem } from "@/services/coffee/types";
 
 export type ProductListType = {
     data: CoffeeItem[],
-    setCoffee: (item: CoffeeItem) => void
+    setCoffee: (item: CoffeeItem) => void;
+    cleanSearch: () => void;
 }

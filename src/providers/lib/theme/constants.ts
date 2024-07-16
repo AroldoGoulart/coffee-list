@@ -9,19 +9,12 @@ const CustomTheme = extendTheme({
       },
       defaultProps: {
         size: 'md',
+        bgColor: 'primary.500',
       },
     },
     Container: {
       baseStyle: {
         padding: 16,
-      },
-    },
-    Box: {
-      baseStyle: ({ colorMode }: any) => {
-        return {
-          backgroundColor: colorMode === 'dark' ?  Colors.bgDark : Colors.bgLight,
-          fontWeight: 'normal',
-        };
       },
     },
   },

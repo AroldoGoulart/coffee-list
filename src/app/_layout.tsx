@@ -4,8 +4,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 
+import Box from '@/components/Box';
 import Providers from '@/providers';
-import { Box } from 'native-base';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -31,7 +31,6 @@ export default function RootLayout() {
   return (
     <Providers>
       <Box
-        safeArea
         flex={1}
         paddingTop={'16'}
       >

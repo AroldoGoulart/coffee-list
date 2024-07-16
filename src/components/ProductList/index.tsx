@@ -1,10 +1,24 @@
 import { CoffeeItem } from "@/services/coffee/types";
-import { Box, FlatList } from "native-base";
+import { Button, FlatList, Text } from "native-base";
+import Box from "../Box";
 import ProductItem from "../ProductItem";
 import { ProductListType } from "./types";
 
 function ProductList(props: ProductListType) {
-  const { data, setCoffee } = props;
+  const { data, setCoffee, cleanSearch } = props;
+  
+  if (data.length === 0) {
+    return (
+      <Box flex={1} alignItems="center" justifyContent="center">
+        <Text fontSize="xl" bold>No coffee found!</Text>
+        <Text fontSize="md">Oh no.. I can't find the coffee!</Text>
+        <Button onPress={cleanSearch} mt={4}>
+         Clean search
+        </Button>
+      </Box>
+    )
+  }
+
   return (
     <FlatList
       data={data}
